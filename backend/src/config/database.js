@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 mongoose.Promise = global.Promise
-module.exports = mongoose.connect('mongodb://localhost/mymoney')
+module.exports = mongoose.connect('mongodb://localhost/mymoney', {useMongoClient: true})
+//module.exports = mongoose.connect('mongodb://localhost/mymoney')
 
 mongoose.Error.messages.general.required = "O atributo path eh obrigatorio"
 mongoose.Error.messages.Number.min = "O '{VALUE} informado eh maior que o limite permitido de {MIN}'"
