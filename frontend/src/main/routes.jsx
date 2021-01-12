@@ -3,6 +3,8 @@ import {Router, Route, Redirect, hashHistory} from 'react-router'
 import BillingCycle from '../billingCycle/billingCycle.jsx'
 import Dashboard from '../dashboard/dashboard.jsx'
 
+//import Dashboard from '../dashboard2/dashboard2.jsx'
+
 export default props => (
     <Router history={hashHistory}>
         <Route path='/' component={Dashboard}/>
