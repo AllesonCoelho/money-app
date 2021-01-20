@@ -11,7 +11,7 @@ export default props => (
         <Header/>
         <SideBar/>
         <div className="content-wrapper">
-            <Routes/>
+            {props.children}
         </div>
         <Footer/>
         <Messages/>
