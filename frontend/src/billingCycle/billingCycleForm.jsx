@@ -6,6 +6,7 @@ import {init} from '../billingCycle/billingCycleActions.js'
 import {reduxForm, Field, formValueSelector} from 'redux-form'
 import LabelAndInput from '../common/form/labelAndInput.jsx'
 import ItemList from './itemList.jsx'
+import Summary from './summary.jsx'
 
 class BillingCycleForm extends Component{
     render(){
@@ -21,6 +22,8 @@ class BillingCycleForm extends Component{
 
                     <Field name='year' component={LabelAndInput} type='number' readOnly={readOnly}
                     label='Ano' cols='12 4' placeholder='Informe o ano'/>
+
+                    <Summary credit={1000} debt={100}/>
 
                     <ItemList cols='12 6' list={credits} readOnly={readOnly}
                     field='credits' legend='Creditos'/>
